@@ -1,7 +1,10 @@
 import math
+from NegativeAError import NegAError
 
 #założenie a nie może być ujemna
 def gx(a,b):
+    if a<0:
+        raise NegAError(a)
     try:
         wynik =  a*math.sqrt(b)
     except ValueError as ve:
@@ -9,6 +12,15 @@ def gx(a,b):
     else:
         return wynik
 
-print(gx(3,4))
-print(gx(3,-2))
-print(gx(-3,6))
+# def gx(a,b):
+#     if a<0:
+#         raise NegAError(a)
+#     wynik =  a*math.sqrt(b)
+#     return wynik
+
+try:
+    print(gx(3,4))
+    print(gx(-3, 6))
+    print(gx(3,-2))
+except NegAError as me:
+    print(me)
