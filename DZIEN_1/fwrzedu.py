@@ -38,3 +38,15 @@ def filtrowanie(dane,test):
 def ekstra_liczba(n):
     return n>=100
 print(filtrowanie(n1,ekstra_liczba))
+
+#własna fukcja mapująca
+def mapowanie(dane,transformacja):
+    mapa = []
+    for element in dane:
+        mapa.append(transformacja(element))
+    return mapa
+
+def addFive(n):
+    return n+5
+
+print(mapowanie(n1,addFive))
