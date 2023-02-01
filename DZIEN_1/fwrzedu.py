@@ -24,3 +24,17 @@ print(cubekrotka)
 
 cubezbior = list(map(lambda x:x**5,n3))
 print(cubezbior)
+
+
+#własna fukcja filtrująca
+
+def filtrowanie(dane,test):
+    plus = []
+    for element in dane:
+        if(test(element)):
+            plus.append(element)
+    return plus
+
+def ekstra_liczba(n):
+    return n>=100
+print(filtrowanie(n1,ekstra_liczba))
