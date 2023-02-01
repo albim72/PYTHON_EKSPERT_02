@@ -29,3 +29,9 @@ zawijanie("ziemniaków")
 zw = startstop(zawijanie)
 
 zw("czekoladek")
+
+@startstop
+def dmuchanie(czego):
+    print(f"dmuchanie: {czego} na urodziny.")
+
+dmuchanie("baloników")
