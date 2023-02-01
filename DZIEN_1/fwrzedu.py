@@ -14,3 +14,13 @@ print(n2parz)
 n3parz = list(filter(lambda x:x%2==0,n3))
 print(n3parz)
 
+#za pomocą funckji map zamapuj trzy kolekcje n1,n2,n3 na nowe listy podnosząc każdą wartość do potęgi 5
+
+cubelist = list(map(lambda x:x**5,n1))
+print(cubelist)
+
+cubekrotka = list(map(lambda x:x**5,n2))
+print(cubekrotka)
+
+cubezbior = list(map(lambda x:x**5,n3))
+print(cubezbior)
