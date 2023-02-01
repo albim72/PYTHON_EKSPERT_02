@@ -10,3 +10,22 @@ def osoba(funkcja,*args):
 
 print(osoba(witaj,"Karol"))
 print(osoba(konkurs,"Olga",78))
+
+#przyklad 2
+
+def startstop(funkcja):
+    def wrapper(*args):
+        print("Startowanie procesu:")
+        funkcja(*args)
+        print("Kończenie procesu....")
+    return wrapper
+
+def zawijanie(czego):
+    print(f"zawijanie {czego} w sreberka")
+
+print("_____________________________________")
+zawijanie("ziemniaków")
+
+zw = startstop(zawijanie)
+
+zw("czekoladek")
