@@ -28,3 +28,17 @@ class Car:
         print(f'rodzaj pojazdu: {self._body.shape}')
         print(f'silnik [kM]: {self._engine.horsepower}')
         print(f'średnica koła [cal]: {self._wheels[0].size}')
+        
+#Bulider
+class Builder(ABC):
+    @abstractmethod
+    def getWheel(self):pass
+
+    @abstractmethod
+    def getEngine(self): pass
+
+    @abstractmethod
+    def getBody(self): pass
+    
+#Director
+
